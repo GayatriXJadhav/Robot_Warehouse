@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppRoute from "./app/AppRoute";
 import { useDispatch, useSelector } from "react-redux";
 import { assignTaskToBot, completeTaskForBot } from "./features/bots/botsSlice";
@@ -59,7 +59,7 @@ function App() {
   }, []);
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
   <Routes>
 
     {/* Public route (Login) */}
@@ -81,7 +81,7 @@ function App() {
     />
     
   </Routes>
-</BrowserRouter>
+</HashRouter>
       
     </>
   );
